@@ -1,6 +1,16 @@
-void    ft_putstr(char *str);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: beborch <beborch@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/10 07:29:09 by beborch           #+#    #+#             */
+/*   Updated: 2017/11/10 07:47:36 by beborch          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    ft_memset(void *s,int c, int n)
+void    ft_memset(void *s,int c, size_t n)
 {
     int i;
     long long *str;
@@ -13,16 +23,4 @@ void    ft_memset(void *s,int c, int n)
         i++;
     }
     return (*str);
-}
-
-#include <string.h>
-
-int     main(void)
-{
-    char data[5];
-    ft_memset(data,'a',5);
-    ft_memset(data,'A',2);
-    ft_putstr(data);
-    ft_putstr("\n");
-    return (0);
 }
