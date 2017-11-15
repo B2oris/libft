@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beborch <beborch@student.42.fr>            +#+  +:+       +#+        */
+/*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 07:30:34 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/14 02:06:25 by beborch          ###   ########.fr       */
+/*   Created: 2017/11/14 03:11:14 by beborch           #+#    #+#             */
+/*   Updated: 2017/11/14 03:54:07 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlen(const char *str)
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
 	size_t i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s1[i] && i < len + 1 - ft_strlen(s2))
+	{
+		if (ft_strncmp(s2, &s1[i], ft_strlen(s2)) == 0)
+			return ((char *)&s1[i]);
 		i++;
-	return (i);
+	}
+	return (NULL);
 }

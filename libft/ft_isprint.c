@@ -6,14 +6,16 @@
 /*   By: beborch <beborch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 07:28:45 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/10 07:43:35 by beborch          ###   ########.fr       */
+/*   Updated: 2017/11/13 02:06:44 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isprint(int c)
+#include "libft.h"
+
+int		ft_isprint(int c)
 {
-    if(c < 32 || c > 126)
-        return(0);
-    else
-        return(1);
+	if (c < 32 || c > 126)
+		return (0);
+	else
+		return (1);
 }

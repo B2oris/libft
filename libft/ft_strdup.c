@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: beborch <beborch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 07:29:43 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/10 07:29:46 by beborch          ###   ########.fr       */
+/*   Updated: 2017/11/13 04:48:54 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char    *ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
-    int i;
-    int j;
-    int *str;
+	int		i;
+	int		j;
+	char	*str;
 
-    i = 0;
-    j = 0;
-    while (src[i] != '\0')
-        i++;
-    if (!(str = (char*)malloc(sizeof(*str) * (i + 1))))
-        return (NULL);
-    while (j < i)
-    {
-        str[j] = src[j];
-        j++;
-    }
-    str[j] = '\0';
-    return (str);
+	i = 0;
+	j = 0;
+	while (src[i] != '\0')
+		i++;
+	if (!(str = (char*)malloc(sizeof(*str) * (i + 1))))
+		return (NULL);
+	while (j < i)
+	{
+		str[j] = src[j];
+		j++;
+	}
+	str[j] = '\0';
+	return (str);
 }
