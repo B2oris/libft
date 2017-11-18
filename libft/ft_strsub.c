@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beborch <beborch@student.42.fr>            +#+  +:+       +#+        */
+/*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 05:04:43 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/17 06:37:56 by beborch          ###   ########.fr       */
+/*   Created: 2017/11/17 04:32:38 by beborch           #+#    #+#             */
+/*   Updated: 2017/11/17 06:40:01 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	const char		*src1;
-	const char		*src2;
-	unsigned int	i;
-
-	src1 = s1;
-	src2 = s2;
-	i = 0;
-	while (src1[i] != '\0' && src2[i] == src1[i] && i != n)
-	{
-		i++;
-	}
-	return (src1[i] - src2[i]);
+	
 }

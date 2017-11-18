@@ -6,7 +6,7 @@
 /*   By: beborch <beborch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 22:46:17 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/15 05:20:58 by beborch          ###   ########.fr       */
+/*   Updated: 2017/11/18 04:17:34 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,9 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int 	ft_isascii(int c);
 int		ft_isprint(int c);
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
+char	*ft_strmap(char const *s, char (*f)(char));
+int		ft_strequ(char const *s1, char const *s2);
 
 #endif

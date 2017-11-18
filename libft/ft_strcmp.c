@@ -6,7 +6,7 @@
 /*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 01:15:11 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/14 02:06:12 by beborch          ###   ########.fr       */
+/*   Updated: 2017/11/17 06:40:26 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
-	char *str1;
-	char *str2;
+	int		i;
+	char	*str1;
+	char	*str2;
 
 	i = 0;
 	str1 = (char *)s1;

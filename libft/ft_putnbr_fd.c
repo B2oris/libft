@@ -6,7 +6,7 @@
 /*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 02:26:48 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/14 02:41:18 by beborch          ###   ########.fr       */
+/*   Updated: 2017/11/18 04:35:12 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,13 @@ void	ft_putnbr_fd(int n, int fd)
 		n = -n;
 		ft_putchar_fd('-', fd);
 	}
-	while ( n >= 10)
+	if (n >= 10)
 	{
 		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', 1);
 	}
-	ft_putchar_fd(n % 10 , fd);
+	if (n < 10)
+	{
+		ft_putchar_fd(n % 10 + '0', fd);
+	}
 }

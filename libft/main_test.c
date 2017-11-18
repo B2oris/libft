@@ -6,20 +6,20 @@
 /*   By: beborch <beborch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 06:30:11 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/14 04:39:01 by beborch          ###   ########.fr       */
+/*   Updated: 2017/11/18 04:35:41 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //int ft_memset(void *s, int c, size_t n);
-
+/*
 void ft_printfcharetoile(char *p)
 {
     ft_putchar(*p);
     *p = 'l';
 }
-
+*/
 int		main(void)
 {
 	//char *c;
@@ -71,12 +71,17 @@ int		main(void)
     ft_putendl(bboch);
     */
 
-    
+ /*   
     char *s = ft_strdup("je suis cacher");
     ft_putstr(s);
     ft_putchar('\n');
     ft_strclr(s);
     ft_putstr(s);
 
-    return(0);
+	 return(0);
+*/
+	int a = 'a';
+	int c = ft_isprint(a);
+	ft_putnbr(c);
+	return (0);
 }

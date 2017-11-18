@@ -6,7 +6,7 @@
 /*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 05:45:36 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/13 05:49:18 by beborch          ###   ########.fr       */
+/*   Updated: 2017/11/17 06:39:21 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ char	*strcat(char *dest, const char *src)
 {
 	int i;
 	int j;
-	
+
 	i = 0;
 	j = 0;
 	while (dest[i] != '\0')
