@@ -19,7 +19,7 @@
 # include <stdlib.h>
 # include <string.h>
 
-void	ft_memset(void *s, int c, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
 int		ft_atoi(const char *nptr);
 int		ft_isprint(int c);
 void	ft_putstr(const char *str);

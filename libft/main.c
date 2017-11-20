@@ -14,7 +14,9 @@
 
 int		main(void)
 {
-	int i = 12;
-	ft_putnbr_fd(i, 1);
+	char *min = "-2147483648";
+	int i = ft_atoi(min);
+	ft_putnbr(i);
+	ft_putchar('\n');
 	return (0);
 }
