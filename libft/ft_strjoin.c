@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/17 04:16:26 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/22 01:07:35 by beborch          ###   ########.fr       */
+/*   Created: 2017/11/22 03:54:59 by beborch           #+#    #+#             */
+/*   Updated: 2017/11/22 03:59:18 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_strequ(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (ft_strcmp(s1, s2) == 0)
-		return (1);
-	else
-		return (0);
+	
 }

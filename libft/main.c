@@ -6,7 +6,7 @@
 /*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 04:27:52 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/18 04:35:51 by beborch          ###   ########.fr       */
+/*   Updated: 2017/11/22 03:52:20 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,14 @@
 
 int		main(void)
 {
+/*
 	char *min = "-2147483648";
 	int i = ft_atoi(min);
 	ft_putnbr(i);
 	ft_putchar('\n');
 	return (0);
+*/
+	char *str = "      ";
+	ft_putstr(ft_strtrim(str));
+	return(0);
 }
