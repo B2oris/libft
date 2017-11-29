@@ -6,7 +6,7 @@
 #    By: beborch <beborch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 07:18:09 by beborch           #+#    #+#              #
-#    Updated: 2017/11/22 01:59:44 by beborch          ###   ########.fr        #
+#    Updated: 2017/11/29 07:30:16 by beborch          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,14 +21,18 @@ SRC = ft_isprint.c ft_memset.c ft_putstr.c ft_strdup.c ft_strlen.c \
 	   ft_putendl.c ft_putendl_fd.c ft_strnstr.c ft_isalpha.c ft_striter.c \
 	   ft_striteri.c ft_strclr.c ft_memalloc.c ft_isalpha.c ft_isdigit.c \
 	   ft_isascii.c ft_isalnum.c ft_isprint.c ft_strnew.c ft_strdel.c \
-	   ft_strtrim.c
+	   ft_strtrim.c ft_memdel.c ft_memmove.c ft_strequ.c ft_strjoin.c \
+	   ft_strmap.c ft_strmapi.c ft_strnequ.c ft_strsplit.c ft_strsub.c \
+	   ft_itoa.c ft_bn.c ft_putbin.c ft_strlcat.c ft_itb.c ft_strtb.c \
+	   ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
+	   ft_lstmap.c
 
 OBJ = $(SRC:.c=.o)
 
 
 all : $(NAME)
 
-$(NAME) :
+$(NAME) : $(OBJ) libft.a Makefile
 	gcc -Wall -Werror -Wextra -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)

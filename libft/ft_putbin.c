@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putbin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 05:51:14 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/26 08:02:13 by beborch          ###   ########.fr       */
+/*   Created: 2017/11/28 04:38:40 by beborch           #+#    #+#             */
+/*   Updated: 2017/11/29 07:32:45 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, const char *src, size_t n)
+void	ft_putbin(char *str)
 {
-	unsigned int i;
-	unsigned int j;
+	int		byte;
+	char	c;
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (j != n && src[j] != '\0')
+	while (str && *str && (byte = 8))
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		while (--byte >= 0)
+		{
+			c = ((*str >> byte) % 2) + 48;
+			write(1, &c, 1);
+		}
+		write(1, (++str && *str ? " " : "\n"), 1);
 	}
-	dest[i] = '\0';
-	return (dest);
 }

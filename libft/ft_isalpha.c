@@ -6,7 +6,7 @@
 /*   By: beborch <beborch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 03:55:15 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/17 03:26:14 by beborch          ###   ########.fr       */
+/*   Updated: 2017/11/26 07:03:28 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int		ft_isalpha(int c)
 {
-	if (c > 'A' && c < 'z')
-		return (0);
-	else
+	if (c >= 'A' && c <= 'Z')
 		return (1);
+	else if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
 }

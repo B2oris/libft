@@ -6,7 +6,7 @@
 /*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 04:32:38 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/22 01:35:57 by beborch          ###   ########.fr       */
+/*   Updated: 2017/11/28 06:49:16 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char *str;
-	size_t i;
+	char	*str;
+	size_t	i;
 
 	i = 0;
 	if ((str = (char *)malloc(sizeof(char) * (len + 1))) == NULL)

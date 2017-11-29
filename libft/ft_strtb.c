@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strtb.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/17 03:18:43 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/28 06:58:02 by beborch          ###   ########.fr       */
+/*   Created: 2017/11/28 04:39:49 by beborch           #+#    #+#             */
+/*   Updated: 2017/11/28 06:48:41 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
+char	**ft_strtb(char *str)
 {
-	unsigned int	i;
-	char			*str;
+	size_t	i;
+	size_t	len;
+	int		byte;
+	char	**tmp;
 
-	i = 0;
-	str = ft_strdup((char *)s);
-	if (str == NULL || f == NULL)
+	if (!str || !*str || !(len = ft_strlen(str)))
 		return (NULL);
-	while (str[i])
+	if (!(tmp = (char**)malloc(sizeof(char*) * (len + 1))))
+		return (NULL);
+	i = 0;
+	while (i < len && (byte = 8))
 	{
-		str[i] = f(i, str[i]);
-		i++;
+		if (!(tmp[i] = (char*)malloc(sizeof(char) * 8)))
+			return (NULL);
+		while (--byte >= 0)
+		{
+			*tmp[i] = ((*str >> byte) % 2) + 48;
+			tmp[i]++;
+		}
+		tmp[i++] -= 8;
+		str++;
 	}
-	return (str);
+	tmp[i] = NULL;
+	return (tmp);
 }

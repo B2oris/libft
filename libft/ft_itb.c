@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_itb.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beborch <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 05:51:14 by beborch           #+#    #+#             */
-/*   Updated: 2017/11/26 08:02:13 by beborch          ###   ########.fr       */
+/*   Created: 2017/11/28 04:39:03 by beborch           #+#    #+#             */
+/*   Updated: 2017/11/28 06:55:46 by beborch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, const char *src, size_t n)
+char	*ft_itb(int nb)
 {
-	unsigned int i;
-	unsigned int j;
+	int		byte;
+	char	*str;
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (j != n && src[j] != '\0')
+	if (!(str = (char*)malloc(sizeof(char) * 8)))
+		return (NULL);
+	byte = 8;
+	while (--byte >= 0)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		*str = ((nb >> byte) % 2) + 48;
+		str++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	*str = '\0';
+	return (str - 8);
 }
